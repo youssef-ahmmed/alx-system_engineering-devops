@@ -1,0 +1,2 @@
+#!/bin/bash
+cut -f 1 < "${1:?Usage: $0 <log_file>}" | sort | uniq -c | sort -rn | head -n 11
