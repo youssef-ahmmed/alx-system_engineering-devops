@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Bash (init) script `101-manage_my_process` that manages `manage_my_process`
+
+file_id='/var/run/my_process.pid'
+file_name='manage_my_process'
+
+start() {
+  ./manage_my_process &
+  echo "$!" > $file_id
+  echo "$file_name started"
+}
+
+stop() {
+  echo "$file_name stopped"
+  kill "$(cat $file_id)"
+  rm $file_id
+}
+
+restart() {
+  kill "$(cat $file_id)"
+  rm file_id
+  ./manage_my_process &
+  echo "$!" > $file_id
+  echo "$file_name restarted"
+}
+
+case ${1} in
+  start )
+    start
+    ;;
+  stop )
+    stop
+    ;;
+  restart )
+    restart
+    ;;
+  * )
+    echo "Usage: manage_my_process {start|stop|restart}"
+esac
