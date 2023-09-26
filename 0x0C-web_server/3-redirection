@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Nginx server configure /redirect_me to redirect to another page
+
+sudo apt-get -y update;
+sudo apt-get -y install nginx;
+sudo ufw allow 'Nginx HTTP';
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html';
+sed -i '/listen 80 default_server;/a \    rewrite ^/redirect_me https://example.com/ permanent;' /etc/nginx/sites-available/default;
+sudo service nginx restart;
