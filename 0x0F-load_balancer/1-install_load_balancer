@@ -2,7 +2,6 @@
 # Install and configure load balancer
 
 load_balance_config="\
-
 frontend welcomeClient
         bind *:80
         mode http
@@ -10,9 +9,8 @@ frontend welcomeClient
 
 backend twoWebServers
         balance roundrobin
-        server 336952-web-01 100.25.0.134 check
-        server 336952-web-02 52.86.81.94 check
-
+        server 336952-web-01 100.25.0.134
+        server 336952-web-02 52.86.81.94
 "
 
 sudo apt-get -y update
