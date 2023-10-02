@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Double the number of webservers
+
+hostname=$(hostname)
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.example.com permanent;' /etc/nginx/sites-available/default
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html > /dev/null
+sudo sed -i "46i error_page 404 /custom_404.html;" /etc/nginx/sites-available/default
+
+sudo sed -i "41i add_header X-Served-By $hostname;" /etc/nginx/sites-available/default
+
+sudo service nginx restart
