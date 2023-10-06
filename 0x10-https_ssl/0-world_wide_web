@@ -1,22 +1,19 @@
 #!/usr/bin/env bash
-# Bash script that take 2 arguments (domain and subdomain) and print specific format string
+# Prints subdomains for a domain
 
-all_servers="\
-The subdomain www is a A record and points to 100.27.5.162
-The subdomain lb-01 is a A record and points to 100.27.5.162
-The subdomain web-01 is a A record and points to 100.25.0.134
-The subdomain web-02 is a A record and points to 52.86.81.94"
-
-function one_arg() {
-    echo "$all_servers"
+output () {
+  domain="$1"
+  subdomain=${domain%%.*}
+  answer_section=$(dig "$domain" | grep -A1 'ANSWER SECTION:' | grep -v 'ANSWER SECTION:');
+  echo "$answer_section" | awk -v subdomain="$subdomain" '{printf "The subdomain %s is a %s record and points to %s\n", subdomain, $4, $5}';
 }
 
-function two_arg() {
-    echo "$all_servers" | awk -v term="$1" '$0 ~ term'
-}
-
-if [ $# -eq 1 ]; then
-    one_arg
+if [ $# -eq 1 ];
+then
+  output "www.""$1"
+  output "lb-01.""$1"
+  output "web-01.""$1"
+  output "web-02.""$1"
 else
-  two_arg "$2"
+  output "$2"".""$1"
 fi
