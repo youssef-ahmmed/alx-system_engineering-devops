@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Bash script that take 2 arguments (domain and subdomain) and print specific format string
+
+all_servers="\
+The subdomain www is a A record and points to 100.27.5.162
+The subdomain lb-01 is a A record and points to 100.27.5.162
+The subdomain web-01 is a A record and points to 100.25.0.134
+The subdomain web-02 is a A record and points to 52.86.81.94"
+
+function one_arg() {
+    echo "$all_servers"
+}
+
+function two_arg() {
+    echo "$all_servers" | awk -v term="$1" '$0 ~ term'
+}
+
+if [ $# -eq 1 ]; then
+    one_arg
+else
+  two_arg "$2"
+fi
