@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Run software as another user
+
+if [ ! "$(id -u "$1" 2>/dev/null)" ]; then
+    sudo useradd "$1"
+fi
+
+sudo -u "$1" whoami
