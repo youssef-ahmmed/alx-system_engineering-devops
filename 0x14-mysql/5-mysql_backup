@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# MySQL backup
+
+datetime=$(date +'%d-%m-%Y')
+
+mysqldump -u root -p"$1" --all-databases | sudo tee backup.sql
+tar -czvf "$datetime".tar.gz backup.sql
