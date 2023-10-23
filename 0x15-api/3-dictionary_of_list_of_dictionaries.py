@@ -13,7 +13,8 @@ if __name__ == '__main__':
 
     dict_format = {}
     for user in users:
-        todos = requests.get(url + "todos", params={"userId": user.get('id')}).json()
+        todos = requests.get(url + "todos",
+                             params={"userId": user.get('id')}).json()
 
         dict_format.update({
             user.get('id'): [
