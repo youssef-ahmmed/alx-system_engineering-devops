@@ -13,13 +13,11 @@ if __name__ == '__main__':
     user = requests.get(url + "users/{}".format(argv[1])).json()
     todos = requests.get(url + "todos", params={"userId": argv[1]}).json()
 
-    dict_format = {
-        user_id: [
-            {"task": task.get('title'), "completed": task.get('completed'),
-             "username": user.get('username')}
-            for task in todos
-        ]
-    }
-
     with open("{}.json".format(user_id), mode='w') as f:
-        json.dump(dict_format, f)
+        json.dump({
+            user_id: [
+                {"task": task.get('title'), "completed": task.get('completed'),
+                 "username": user.get('username')}
+                for task in todos
+            ]
+        }, f)
