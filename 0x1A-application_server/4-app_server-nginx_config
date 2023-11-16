@@ -1,0 +1,39 @@
+server {
+        listen 80 default_server;
+
+        rewrite ^/redirect_me https://www.example.com permanent;
+
+        listen [::]:80 default_server;
+
+        location /hbnb_static/ {
+                alias /data/web_static/current/;
+        }
+
+        add_header X-Served-By $HOSTNAME;
+
+        root /var/www/html;
+        error_page 404 /custom_404.html;
+
+
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name 100.25.0.134;
+
+        location /airbnb-onepage/ {
+                proxy_pass http://127.0.0.1:5000;
+        }
+
+        location ~ /airbnb-dynamic/number_odd_or_even/(\d+)$ {
+            proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        }
+
+        location /api {
+                proxy_pass http://127.0.0.1:5002/api;
+        }
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+}
