@@ -4,11 +4,11 @@
 
 #### Read or watch:
 
-* [What is a firewall](https://intranet.alxswe.com/rltoken/vjB4LyHRdtEImzZcuD89ZQ)
+* [What is a firewall](https://en.wikipedia.org/wiki/Firewall_%28computing%29)
 ## Tasks
 
-| Task | File |
-| ---- | ---- |
+| Task                              | File                                                                   |
+|-----------------------------------|------------------------------------------------------------------------|
 | 0. Block all incoming traffic but | [0-block_all_incoming_traffic_but](./0-block_all_incoming_traffic_but) |
-| 1. Port forwarding | [100-port_forwarding](./100-port_forwarding) |
+| 1. Port forwarding                | [100-port_forwarding](./100-port_forwarding)                           |
 
