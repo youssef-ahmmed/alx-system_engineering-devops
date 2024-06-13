@@ -2,9 +2,9 @@
 
 ## Resources
 
-* [Introduction to load-balancing and HAproxy](https://intranet.alxswe.com/rltoken/B7f3oz8i3Xvvom_YQZzLnQ)
-* [HTTP header](https://intranet.alxswe.com/rltoken/sZ9v3Vq2tgLwN_PWVQketw)
-* [Debian/Ubuntu HAProxy packages](https://intranet.alxswe.com/rltoken/2VRAgtKKR9g6Xfb0xzGiSg)
+* [Introduction to load-balancing and HAproxy](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
+* [HTTP header](https://www.techopedia.com/definition/27178/http-header)
+* [Debian/Ubuntu HAProxy packages](https://haproxy.debian.net/)
 
 
 ## Tasks
