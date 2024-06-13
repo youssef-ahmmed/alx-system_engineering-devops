@@ -2,11 +2,11 @@
 
 ## Resources
 
-* [Intro to Configuration Management](https://intranet.alxswe.com/rltoken/GL30hu-aRcKzPOvK8JO-Bg)
-* [Puppet resource type: file](https://intranet.alxswe.com/rltoken/WON0M4DNRabf88KAG_pDUA)
-* [Puppet's Declarative Language: Modeling Instead of Scripting](https://intranet.alxswe.com/rltoken/0V2fBdafkfKPMxA1umea3Q)
-* [Puppet lint](https://intranet.alxswe.com/rltoken/CRUMeEMdcX-UtbWsUM9xLQ)
-* [Puppet emacs mode](https://intranet.alxswe.com/rltoken/MzHXCntAkPzOqMnI6_rpWQ)
+* [Intro to Configuration Management](https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management)
+* [Puppet resource type: file](https://www.puppet.com/docs/puppet/5.5/types/file.html)
+* [Puppet's Declarative Language: Modeling Instead of Scripting](https://www.puppet.com/blog)
+* [Puppet lint](http://puppet-lint.com/)
+* [Puppet emacs mode](https://github.com/voxpupuli/puppet-mode)
 
 ## Tasks
 
