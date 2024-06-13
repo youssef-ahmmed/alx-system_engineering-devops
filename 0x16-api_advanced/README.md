@@ -4,8 +4,8 @@
 
 #### Read or watch:
 
-* [Reddit API Documentation](https://intranet.alxswe.com/rltoken/b-4nD6hwEeNYTwYl5yWNwA)
-* [Query String](https://intranet.alxswe.com/rltoken/luFn_zrgmAQ0OAO_PEI9bA)
+* [Reddit API Documentation](https://www.reddit.com/dev/api/)
+* [Query String](https://en.wikipedia.org/wiki/Query_string)
 ## Learning Objectives
 
 ### General
