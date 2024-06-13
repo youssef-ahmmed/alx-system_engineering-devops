@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Gracefully reloads Gunicorn
+
+if pgrep -x "gunicorn" > /dev/null; then
+    GUNICORN_MASTER_PID=$(pgrep -o gunicorn)
+    kill -HUP "$GUNICORN_MASTER_PID" > /dev/null 2>&1
+fi
