@@ -4,13 +4,13 @@
 
 #### Read or watch:
 
-* [What is a (physical) server - text](https://intranet.alxswe.com/rltoken/dkgW9lKiBRiUZHfq0MDJuw)
-* [What is a (physical) server - video](https://intranet.alxswe.com/rltoken/AxFcTdcXUCsrVp01X_EbFA)
-* [SSH essentials](https://intranet.alxswe.com/rltoken/ux0eM1QU9reNyG45b0erAQ)
-* [SSH Config File](https://intranet.alxswe.com/rltoken/Rc9FpSy4ZaQWPlcWLinbNw)
-* [Public Key Authentication for SSH](https://intranet.alxswe.com/rltoken/tOcxk5mtkedBM0WxyDZxTw)
-* [How Secure Shell Works](https://intranet.alxswe.com/rltoken/j0atjRrVfZ6F810qmPfAzA)
-* [SSH Crash Course](https://intranet.alxswe.com/rltoken/FKqd8CjxExmpWGu6xGavKw)
+* [What is a (physical) server - text](https://en.wikipedia.org/wiki/Server_%28computing%29#Hardware_requirement)
+* [What is a (physical) server - video](https://www.youtube.com/watch?v=B1ANfsDyjeA&ab_channel=TechnologyProfession)
+* [SSH essentials](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
+* [SSH Config File](https://www.ssh.com/academy/ssh/config)
+* [Public Key Authentication for SSH](https://www.ssh.com/academy/ssh/public-key-authentication)
+* [How Secure Shell Works](https://www.youtube.com/watch?v=ORcvSkgdA58&ab_channel=Computerphile)
+* [SSH Crash Course](https://www.youtube.com/watch?v=hQWRp-FdTpc&ab_channel=TraversyMedia)
 ## Learning Objectives
 
 ### General
